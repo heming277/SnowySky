@@ -1,0 +1,326 @@
+<!-- index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link href="output.css" rel="stylesheet">
+  <link href="animations.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-blue-200">
+  <!-- Sticky Navigation Bar -->
+  <nav class="sticky top-0 z-50 bg-white shadow flex justify-between items-center">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <ul class="flex justify-center space-x-4">
+        <li><a href="#about" class="text-gray-600 hover:text-blue-500">About Me</a></li>
+        <li><a href="#experience" class="text-gray-600 hover:text-blue-500">Experience</a></li>
+        <li><a href="#skills" class="text-gray-600 hover:text-blue-500">Skills</a></li>
+        <li><a href="#portfolio" class="text-gray-600 hover:text-blue-500">Portfolio</a></li>
+        <li><a href="#additional-info" class="text-gray-600 hover:text-blue-500">More</a></li>
+        <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="text-gray-500 dark:text-gray-400">
+        <span>Dark Mode</span>
+      </button>
+    </div>
+  </nav>
+<!-- Hero Section with Dynamic Sky Background -->
+<header id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-300 to-blue-500 relative">
+    <!-- Text content -->
+    <div class="text-center z-10">
+      <h1 class="text-6xl font-bold text-white">Welcome to My Website</h1>
+      <p class="text-xl text-gray-200 mt-4">A place where creativity meets innovation.</p>
+    </div>
+    <canvas id="particleCanvas" width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 0;"></canvas>
+</header>
+<!-- About Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="flex flex-wrap justify-center text-center md:text-left">
+        <div class="w-full md:w-1/2">
+          <img src="assets/logos/mimi.JPG" alt="Heming Liu" class="rounded-full mx-auto md:mx-0 mb-8 md:mb-0 w-48 h-48 object-cover">
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-4xl font-bold text-gray-800">About Me</h2>
+          <p class="text-lg text-gray-700 mt-4">
+            Hi, I'm Heming Liu, a passionate software engineer with a strong background in programming, web development, and machine learning. I graduated from the University of Waterloo with a Bachelor of Applied Science in Electrical and Computer Engineering.
+          </p>
+          <!-- Add more personal details or a brief story here -->
+          <div class="mt-8">
+            <a href="#portfolio" class="inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">View My Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Experience Section -->
+
+<section id="experience" class="py-16 bg-f8fafc">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-normal text-center text-1e293b mb-12">Where I've Worked</h2>
+      <div class="experience-grid">
+        <!-- Experience Item -->
+        <div class="experience-item">
+          <img src="assets/logos/intuit-logo.png" alt="Intuit Logo" class="experience-logo">
+          <p class="experience-company">Intuit Inc.</p>
+        </div>
+        <!-- Experience Item -->
+        <div class="experience-item">
+            <img src="assets/logos/facebook-logo.png" alt="Facebook Logo" class="experience-logo">
+            <img src="assets/logos/meta-logo.png" alt="Meta Logo" class="experience-logo">
+            <p class="experience-company">Facebook (now Meta)</p>
+        </div>
+        <!-- Experience Item -->
+        <div class="experience-item">
+          <img src="assets/logos/arista-logo.png" alt="Arista Networks Logo" class="experience-logo">
+          <p class="experience-company">Arista Networks</p>
+        </div>
+        <!-- Experience Item -->
+        <div class="experience-item">
+          <img src="assets/logos/amd-logo.png" alt="AMD Logo" class="experience-logo">
+          <p class="experience-company">Advanced Micro Devices</p>
+        </div>
+        <!-- Experience Item -->
+        <div class="experience-item">
+            <img src="assets/logos/klocwork-logo.png" alt="Klocwork Logo" class="experience-logo">
+            <img src="assets/logos/perforce-logo.png" alt="Perforce Logo" class="experience-logo">
+            <p class="experience-company">Klocwork (now Perforce)</p>
+        </div>
+    </div>
+    </div>
+  </section>
+  
+<!-- Skills & Expertise Section -->
+<section id="skills">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Advanced Programming</h3>
+          <p>Proficient in Swift, C#, Java, Python, C, C++, with a focus on creating efficient, scalable code.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Augmented Reality & AI</h3>
+          <p>Developed AR applications using ARKit and RealityKit. Experience in AI news aggregation and sentiment analysis.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Web Development & Design</h3>
+          <p>Full-stack development skills with MERN stack and responsive web design with HTML/CSS.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Data Analysis & Machine Learning</h3>
+          <p>Applied unsupervised learning with LDA for topic modeling and utilized NLP for sentiment analysis.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Software Architecture</h3>
+          <p>Designed and implemented robust software solutions, including command-line tools, web crawlers, and media allocators.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Version Control & CI/CD</h3>
+          <p>Expertise in Git and Perforce, with experience in continuous integration and deployment workflows.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Testing & Automation</h3>
+          <p>Developed comprehensive automation test suites and performed data mining for test result analysis.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Database Management</h3>
+          <p>Managed both SQL and NoSQL databases, with experience in database design and web API integration.</p>
+        </div>
+        <!-- Skill Item -->
+        <div class="skill-item">
+          <h3 class="text-xl font-semibold">Interactive Visualization</h3>
+          <p>Created web applications to visualize complex data, such as attention mechanisms in language models.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-16 bg-blue-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Portfolio item 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-5">
+          <h3 class="text-lg font-bold">DistributedCluster_MLTrainer</h3>
+          <p class="text-sm text-gray-600">A Python project focused on machine learning model training in a distributed system.</p>
+          <a href="https://github.com/heming277/DistributedCluster_MLTrainer" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+        </div>
+        <!-- Repeat for other portfolio items -->
+        <!-- Portfolio item 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-5">
+          <h3 class="text-lg font-bold">VisualizeAI</h3>
+          <p class="text-sm text-gray-600">Visualizing the Attention Mechanism of Transformers in HTML.</p>
+          <a href="https://github.com/heming277/VisualizeAI" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+        </div>
+        <!-- Portfolio item 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-5">
+          <h3 class="text-lg font-bold">ARPets</h3>
+          <p class="text-sm text-gray-600">An AR application developed in Swift for interactive pets.</p>
+          <a href="https://github.com/heming277/ARPets" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+        </div>
+        <!-- Add more portfolio items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section id="additional-info" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">More About Me</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Education -->
+        <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center">
+          <a href="https://uwaterloo.ca" target="_blank">
+            <img src="assets/logos/uw-logo.png" alt="University of Waterloo Logo" class="logo" />
+          </a>
+          <h3 class="text-2xl font-semibold text-gray-800">Education</h3>
+          <p class="text-md text-gray-600">University of Waterloo</p>
+          <p class="text-md text-gray-600">B.A.Sc in Electrical and Computer Engineering</p>
+          <p class="text-md text-gray-600">2009 - 2014</p>
+          <!-- Add any honors or significant achievements here -->
+        </div>
+        <!-- Volunteering -->
+        <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center">
+          <a href="https://www.kipcanada.org" target="_blank">
+            <img src="assets/logos/ch-logo.png" alt="Volunteer Organization Logo" class="logo" />
+          </a>
+          <h3 class="text-2xl font-semibold text-gray-800">Volunteering</h3>
+          <p class="text-md text-gray-600">Passionate about community service, with a focus on initiatives that support children and animals.</p>
+          <!-- Add specific roles or impacts here -->
+        </div>
+        <!-- Interests -->
+        <div class="bg-blue-100 rounded-lg shadow-lg p-6 text-center">
+          <a href="https://www.nature.com/natmachintell/" target="_blank">
+            <img src="assets/logos/ai-logo.png" alt="Interest Logo" class="logo" />
+          </a>
+          <h3 class="text-2xl font-semibold text-gray-800">Interests</h3>
+          <p class="text-md text-gray-600">Enthusiast in sports, creative arts, and technology. Keen on exploring advancements in AI and machine learning.</p>
+          <!-- Add any additional interests or hobbies here -->
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Section -->
+<section id="contact" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+      <p class="text-center mb-8">Feel free to reach out directly at <a href="mailto:hemingliu123@gmail.com" class="text-blue-500 hover:underline">hemingliu123@gmail.com</a></p>
+      <div class="max-w-lg mx-auto">
+        <form action="your-server-side-script" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-semibold text-gray-700">Name</label>
+            <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+            <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="inline-block px-6 py-2 text-sm font-semibold leading-6 text-center text-white uppercase transition bg-blue-500 rounded-full shadow ripple hover:shadow-lg hover:bg-blue-600 focus:outline-none">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="py-4 bg-blue-800 text-white text-center">
+    <p>&copy; 2024 Heming Liu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add smooth scrolling to all links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleText = themeToggleBtn.querySelector('span');
+    
+    themeToggleBtn.addEventListener('click', () => {
+      const isDarkMode = document.documentElement.classList.toggle('dark');
+      themeToggleText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+    });
+
+    // Particle effect
+    const canvas = document.getElementById('particleCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  
+    const particles = [];
+    const particleCount = 200; // Fewer particles for a more subtle effect
+    const maxVelocity = 0.3; // Slower max velocity for a gentle drift
+    const particleSize = 5; // Larger size for visibility
+  
+    function createParticles() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * maxVelocity,
+          vy: (Math.random() - 0.5) * maxVelocity
+        });
+      }
+    }
+  
+    function moveParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.7)'; // Soft white color for snow
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+  
+        // Reverse velocity if the particle goes off-screen
+        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+  
+        // Draw the particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particleSize, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+  
+    function repelParticles(event) {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      particles.forEach(particle => {
+        const dx = particle.x - mouseX;
+        const dy = particle.y - mouseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 150) { // Increase the repulsion area
+          const force = (150 - distance) / 150; // Decrease the repulsion force
+          particle.vx += (dx / distance) * force * 0.1; // Slower repulsion
+          particle.vy += (dy / distance) * force * 0.1;
+        }
+      });
+    }
+  
+    createParticles();
+    setInterval(moveParticles, 1000 / 60);
+    canvas.addEventListener('mousemove', repelParticles);
+    
+  </script>  
+  </body>  
+</html>

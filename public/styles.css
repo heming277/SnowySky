@@ -1,0 +1,380 @@
+/*styles.css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.dark {
+  --bg-primary: #1e293b; /* Darker blue */
+  --text-primary: #f8fafc; /* Lighter text */
+  --text-secondary: #d1d5db; /* Lighter secondary text */
+  --border-color: #4b5563; /* Darker border */
+}
+
+/* Apply dark mode variables */
+.dark .bg-blue-200 {
+  background-color: var(--bg-primary);
+}
+
+.dark .text-gray-700 {
+  color: var(--text-primary);
+}
+
+.dark .text-gray-600 {
+  color: var(--text-secondary);
+}
+
+.dark .border-gray-300 {
+  border-color: var(--border-color);
+}
+
+/* Modify hero and work section for dark mode */
+.dark .bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #4b5563, #1e293b); /* Darker gradient */
+}
+
+.dark .bg-blue-100 {
+  background-color: #2d3748; /* Darker background for work section */
+}
+/* Hero section background gradient */
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #93C5FD, #3B82F6);
+}
+
+
+
+/* Dark Mode Toggle Button */
+#theme-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+
+nav.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50; /* Ensure it's above other content */
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3B82F6; /* Match your hero gradient end color */
+}
+
+
+
+/* About Me Section */
+#about {
+    background-color: #f8fafc; /* Light background color for contrast */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  #about img {
+    border-radius: 9999px; /* Full roundness for the image */
+    width: 12rem; /* Fixed size */
+    height: 12rem; /* Fixed size */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+  
+  #about h2 {
+    color: #1e293b; /* Dark blue text color */
+    margin-bottom: 1rem;
+  }
+  
+  #about p {
+    color: #4b5563; /* Dark grey text color */
+    margin-bottom: 1rem;
+  }
+  
+  #about a {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Responsive design for About section */
+  @media (min-width: 768px) {
+    #about .flex {
+      flex-wrap: nowrap;
+    }
+  
+    #about .w-full {
+      width: 50%;
+    }
+  
+    #about img {
+      margin-right: 2rem; /* Add space between image and text on larger screens */
+    }
+  }
+  
+
+/* Button styles */
+.inline-block {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* 6px */
+  font-size: 1rem;
+}
+
+.bg-blue-500 {
+  background-color: #3B82F6;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.px-6 {
+  padding-left: 1.5rem; /* 24px */
+  padding-right: 1.5rem; /* 24px */
+}
+
+.py-2 {
+  padding-top: 0.5rem; /* 8px */
+  padding-bottom: 0.5rem; /* 8px */
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* 8px */
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #2563EB;
+}
+
+.transition-colors {
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Portfolio Section */
+#portfolio {
+  background-color: #e2e8f0; /* Lighter blue background for the section */
+}
+
+#portfolio h2 {
+  color: #1e293b; /* Dark blue text color */
+}
+
+#portfolio .bg-white {
+  background-color: #ffffff;
+}
+
+#portfolio .rounded-lg {
+  border-radius: 0.5rem; /* 8px */
+}
+
+#portfolio .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#portfolio p {
+  color: #4b5563; /* Dark grey text color */
+}
+
+#portfolio a {
+  color: #3B82F6; /* Blue text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#portfolio a:hover {
+  color: #2563EB; /* Darker blue on hover */
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 1.5rem; /* 24px */
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+
+
+  /* Skills & Expertise Section */
+#skills {
+  padding: 4rem 0;
+}
+
+#skills h2 {
+  margin-bottom: 2rem;
+}
+
+.skill-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item h3 {
+  color: #111827; /* Dark text for headings */
+  margin-bottom: 1rem;
+}
+
+.skill-item p {
+  color: #6b7280; /* Gray text for paragraphs */
+}
+
+@media (min-width: 768px) {
+  .skill-item {
+    padding: 2rem;
+  }
+}
+
+/* Experience Section */
+#experience {
+  background-color: #f8fafc;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#experience h2 {
+  color: #1e293b;
+  margin-bottom: 3rem;
+  font-weight: normal; /* Non-bold text */
+}
+
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem; /* This adds space between the grid items */
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px; /* Maintain the max-width for logos */
+  margin: 1rem; /* Add margin to space out the items */
+}
+
+.experience-logo {
+  max-width: 100%;
+  margin-bottom: 1rem; /* Space between logo and company name */
+}
+
+.experience-company {
+  color: #4b5563;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive design for Experience section */
+@media (min-width: 640px) {
+  .experience-item {
+    width: calc(50% - 2rem); /* Adjust width and spacing for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .experience-item {
+    width: calc(25% - 2rem); /* Adjust width and spacing for large screens */
+  }
+}
+
+/* Combined Section for Education, Volunteering, and Interests */
+#additional-info {
+  background-color: #f8fafc; /* Light background color for contrast */
+}
+
+#additional-info h2 {
+  color: #1e293b; /* Dark blue text color */
+  margin-bottom: 2rem;
+}
+
+#additional-info .container {
+  max-width: 1200px; /* Set a max-width for the container */
+  margin: auto; /* Center the container */
+}
+
+#additional-info .grid > div {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 0.5rem; /* 8px border radius for rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#additional-info .grid > div:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+#additional-info h3 {
+  color: #1e293b; /* Dark blue text color for subheadings */
+  margin-bottom: 1rem;
+}
+
+#additional-info p {
+  color: #4b5563; /* Dark grey text color */
+}
+
+#additional-info .logo {
+    max-width: 120px; /* Control the maximum width of the logo */
+    height: 120px; /* Set a fixed height for the logos */
+    margin-bottom: 1rem; /* Space between logo and text */
+    display: block; /* Ensure it's a block element to center it */
+    margin-left: auto; /* Center the logo horizontally */
+    margin-right: auto; /* Center the logo horizontally */
+    object-fit: contain; /* Ensure the image is scaled correctly within the dimensions */
+  }
+  
+
+/* Responsive grid columns */
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
