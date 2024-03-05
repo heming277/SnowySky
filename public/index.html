@@ -5,57 +5,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Website</title>
-  <link href="output.css" rel="stylesheet">
   <link href="animations.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 </head>
 <body class="bg-blue-200">
   <!-- Sticky Navigation Bar -->
-  <nav class="sticky top-0 z-50 bg-white shadow flex justify-between items-center">
+  <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow flex justify-between items-center">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <ul class="flex justify-center space-x-4">
-        <li><a href="#about" class="text-gray-600 hover:text-blue-500">About Me</a></li>
-        <li><a href="#experience" class="text-gray-600 hover:text-blue-500">Experience</a></li>
-        <li><a href="#skills" class="text-gray-600 hover:text-blue-500">Skills</a></li>
-        <li><a href="#portfolio" class="text-gray-600 hover:text-blue-500">Portfolio</a></li>
-        <li><a href="#additional-info" class="text-gray-600 hover:text-blue-500">More</a></li>
-        <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a></li>
+        <li><a href="#about" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">About Me</a></li>
+        <li><a href="#experience" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">Experience</a></li>
+        <li><a href="#skills" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">Skills</a></li>
+        <li><a href="#portfolio" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">Portfolio</a></li>
+        <li><a href="#blog" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">Blog</a></li>
+        <li><a href="#additional-info" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">More</a></li>
+        <li><a href="#contact" class="text-gray-600 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">Contact</a></li>
       </ul>
-      <button id="theme-toggle" class="text-gray-500 dark:text-gray-400">
-        <span>Dark Mode</span>
+      <button id="theme-toggle" class="text-gray-600 dark:text-gray-200" aria-label="Toggle Dark Mode">
+        <span id="theme-toggle-text">Dark Mode</span>
       </button>
     </div>
   </nav>
 <!-- Hero Section with Dynamic Sky Background -->
-<header id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-300 to-blue-500 relative">
+<header id="hero" class="min-h-screen flex items-center justify-center relative">
     <!-- Text content -->
     <div class="text-center z-10">
       <h1 class="text-6xl font-bold text-white">Welcome to My Website</h1>
-      <p class="text-xl text-gray-200 mt-4">A place where creativity meets innovation.</p>
+      <p class="text-xl text-gray-200 mt-4" id="typing"></p>
     </div>
+    
+    <script>
+      const phrases = ["A place where creativity meets innovation.", "Explore my portfolio.", "Let's create something amazing together."];
+      let currentPhrase = 0;
+      let currentChar = 0;
+      const typingElement = document.getElementById('typing');
+    
+      function type() {
+        if (currentChar < phrases[currentPhrase].length) {
+          typingElement.textContent += phrases[currentPhrase].charAt(currentChar);
+          currentChar++;
+          setTimeout(type, 100);
+        } else {
+          setTimeout(erase, 3000);
+        }
+      }
+    
+      function erase() {
+        if (currentChar > 0) {
+          typingElement.textContent = phrases[currentPhrase].substring(0, currentChar - 1);
+          currentChar--;
+          setTimeout(erase, 50);
+        } else {
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+          setTimeout(type, 200);
+        }
+      }
+    
+      setTimeout(type, 200);
+    </script>
+
     <canvas id="particleCanvas" width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 0;"></canvas>
-</header>
+
+  </header>
 <!-- About Section -->
-<section id="about" class="py-16 bg-white">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <div class="flex flex-wrap justify-center text-center md:text-left">
-        <div class="w-full md:w-1/2">
-          <img src="assets/logos/mimi.JPG" alt="Heming Liu" class="rounded-full mx-auto md:mx-0 mb-8 md:mb-0 w-48 h-48 object-cover">
-        </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-4xl font-bold text-gray-800">About Me</h2>
-          <p class="text-lg text-gray-700 mt-4">
-            Hi, I'm Heming Liu, a passionate software engineer with a strong background in programming, web development, and machine learning. I graduated from the University of Waterloo with a Bachelor of Applied Science in Electrical and Computer Engineering.
-          </p>
-          <!-- Add more personal details or a brief story here -->
-          <div class="mt-8">
-            <a href="#portfolio" class="inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">View My Github</a>
-          </div>
+
+<section id="about" class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="flex flex-wrap justify-center text-center md:text-left">
+      <div class="w-full md:w-1/2">
+        <img src="assets/logos/mimi.png" alt="Heming Liu" class="rounded-full mx-auto md:mx-0 mb-8 md:mb-0 w-48 h-48 object-cover">
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100">About Me</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mt-4">
+          Hi, I'm Heming Liu, a passionate software engineer with a strong background in programming, web development, and machine learning. I graduated from the University of Waterloo with a Bachelor of Applied Science in Electrical and Computer Engineering.
+        </p>
+        <div class="mt-8">
+          <a href="#portfolio" class="inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors">View My Github</a>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 <!-- Experience Section -->
 
 <section id="experience" class="py-16 bg-f8fafc">
@@ -176,6 +209,45 @@
     </div>
   </section>
 
+<!-- Blog Section -->
+
+<section id="blog" class="py-16 bg-blue-200">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-8">Blog Posts</h2>
+    <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <script type="module">document.addEventListener('DOMContentLoaded', function() {
+      
+      var client = contentful.createClient({
+        space: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      });
+    
+      client.getEntries()
+        .then(function(entries) {
+          entries.items.forEach(function(entry) {
+            var blogContainer = document.getElementById('blog-posts');
+            var blogCard = document.createElement('div');
+            blogCard.className = 'blog-card bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105';
+            
+            var blogLink = document.createElement('a');
+            blogLink.href = `blog-template.html?post=${entry.sys.id}`;
+            blogLink.className = 'block p-6 hover:text-blue-500';
+            blogLink.innerText = entry.fields.title;
+            
+            blogCard.appendChild(blogLink);
+            blogContainer.appendChild(blogCard);
+          });
+        })
+        .catch(console.error);
+    });</script>
+    </div>
+  </div>
+</section>
+
+
+
+
+
   <section id="additional-info" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-8">More About Me</h2>
@@ -206,12 +278,13 @@
             <img src="assets/logos/ai-logo.png" alt="Interest Logo" class="logo" />
           </a>
           <h3 class="text-2xl font-semibold text-gray-800">Interests</h3>
-          <p class="text-md text-gray-600">Enthusiast in sports, creative arts, and technology. Keen on exploring advancements in AI and machine learning.</p>
+          <p class="text-md text-gray-600">Enthusiast in sports, books, and technology. Keen on exploring advancements in AI and machine learning.</p>
           <!-- Add any additional interests or hobbies here -->
         </div>
       </div>
     </div>
   </section>
+
 <!-- Contact Section -->
 <section id="contact" class="py-16">
     <div class="container mx-auto px-4">
@@ -238,15 +311,16 @@
       </div>
     </div>
   </section>
+
 <!-- Footer -->
-  <footer class="py-4 bg-blue-800 text-white text-center">
+  <footer class="py-4 bg-blue-500 text-white dark:text-gray-200  dark:bg-gray-800  text-center">
     <p>&copy; 2024 Heming Liu. All rights reserved.</p>
   </footer>
 
   <script>
     // Add smooth scrolling to all links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function (event) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
@@ -254,73 +328,153 @@
       });
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+    // Enhanced dark mode toggle to remember user preference
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeToggleText = themeToggleBtn.querySelector('span');
-    
+
     themeToggleBtn.addEventListener('click', () => {
       const isDarkMode = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Save preference
       themeToggleText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
     });
 
-    // Particle effect
-    const canvas = document.getElementById('particleCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Auto toggle based on system clock
+    const hour = new Date().getHours();
+    const isDayTime = hour >= 6 && hour < 18;
+
+    // Check if a theme preference is already saved
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+      themeToggleText.textContent = savedTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    } else if (!isDayTime) { // Apply dark mode if it's nighttime and no preference is saved
+      document.documentElement.classList.add('dark');
+      themeToggleText.textContent = 'Light Mode';
+      localStorage.setItem('theme', 'dark'); // Optionally save this as a preference
+    } else {
+      // It's daytime and no preference is saved, ensure light mode is active
+      document.documentElement.classList.remove('dark');
+      themeToggleText.textContent = 'Dark Mode';
+      localStorage.setItem('theme', 'light'); // Optionally save this as a preference
+    }
+  });
   
-    const particles = [];
-    const particleCount = 200; // Fewer particles for a more subtle effect
-    const maxVelocity = 0.3; // Slower max velocity for a gentle drift
-    const particleSize = 5; // Larger size for visibility
-  
-    function createParticles() {
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * maxVelocity,
-          vy: (Math.random() - 0.5) * maxVelocity
-        });
+     // Particle effect with optimized animation loop
+  const canvas = document.getElementById('particleCanvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const particleCount = 37;
+  const maxVelocity = 0.3;
+  const particleSize = 7;
+
+  function createParticles() {
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * maxVelocity,
+        vy: (Math.random() - 0.5) * maxVelocity
+      });
+    }
+  }
+
+  function moveParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+    particles.forEach(particle => {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+
+      if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+      if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particleSize, 0, Math.PI * 2);
+      ctx.fill();
+    });
+  }
+
+  function repelParticles(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    particles.forEach(particle => {
+      const dx = particle.x - mouseX;
+      const dy = particle.y - mouseY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 150) { // Repulsion area
+        const forceDirectionX = dx / distance;
+        const forceDirectionY = dy / distance;
+        const maxDistance = 150; // Max distance for repulsion
+        const force = (maxDistance - distance) / maxDistance; // Calculate force based on distance
+
+        particle.vx += forceDirectionX * force * 0.037; // Apply force to particle velocity
+        particle.vy += forceDirectionY * force * 0.037;
       }
-    }
-  
-    function moveParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.7)'; // Soft white color for snow
-      particles.forEach(particle => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-  
-        // Reverse velocity if the particle goes off-screen
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-  
-        // Draw the particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particleSize, 0, Math.PI * 2);
-        ctx.fill();
-      });
-    }
-  
-    function repelParticles(event) {
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-      particles.forEach(particle => {
-        const dx = particle.x - mouseX;
-        const dy = particle.y - mouseY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 150) { // Increase the repulsion area
-          const force = (150 - distance) / 150; // Decrease the repulsion force
-          particle.vx += (dx / distance) * force * 0.1; // Slower repulsion
-          particle.vy += (dy / distance) * force * 0.1;
-        }
-      });
-    }
-  
-    createParticles();
-    setInterval(moveParticles, 1000 / 60);
-    canvas.addEventListener('mousemove', repelParticles);
-    
+    });
+  }
+
+
+  function animate() {
+    moveParticles();
+    requestAnimationFrame(animate);
+  }
+
+  createParticles();
+  animate(); // Use requestAnimationFrame for smoother animations
+
+  canvas.addEventListener('mousemove', repelParticles);  
   </script>  
+
+
+<style>
+
+  #typing {
+    min-height: 24px; /* Adjust based on your font size to ensure it's always taller than the tallest possible text */
+    display: inline-block; /* Allows us to set a height */
+  }
+
+  :root {
+    /* Light mode with a bluer gradient */
+    --sky-color-start: #7dd3fc; /* Lighter blue */
+    --sky-color-end: #1e40af; /* Darker blue */
+  }
+
+  .dark {
+    --sky-color-start: #023e8a; /* Rich dark blue */
+    --sky-color-end: #001233; /* Almost black blue */
+  }
+
+
+  @keyframes skyGradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  #hero {
+    background: linear-gradient(270deg, var(--sky-color-start), var(--sky-color-end));
+    background-size: 400% 400%;
+    animation: skyGradientAnimation 30s ease infinite;
+  }
+
+  /* Adjusting text color for better visibility in dark mode */
+  .dark #hero h1, .dark #hero p {
+    color: #cbd5e1; /* Lighter gray for better contrast */
+  }
+</style>
+
+
+
+
   </body>  
+  
 </html>
+
+
+
+

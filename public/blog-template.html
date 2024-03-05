@@ -1,0 +1,25 @@
+<!-- blog-template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="output.css" rel="stylesheet">
+    <link href="animations.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+</head>
+<body>
+  <div id="blog-post-title" class="blog-post-title"></div>
+  <div id="blog-post-content" class="blog-post-content"></div>
+  <script src="src/blog.js" type="module"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark'); // Change this line
+      }
+    });
+  </script>
+</body>
+</html>

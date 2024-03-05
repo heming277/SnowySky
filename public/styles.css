@@ -4,44 +4,7 @@
 @tailwind utilities;
 
 /* Custom styles */
-.dark {
-  --bg-primary: #1e293b; /* Darker blue */
-  --text-primary: #f8fafc; /* Lighter text */
-  --text-secondary: #d1d5db; /* Lighter secondary text */
-  --border-color: #4b5563; /* Darker border */
-}
-
-/* Apply dark mode variables */
-.dark .bg-blue-200 {
-  background-color: var(--bg-primary);
-}
-
-.dark .text-gray-700 {
-  color: var(--text-primary);
-}
-
-.dark .text-gray-600 {
-  color: var(--text-secondary);
-}
-
-.dark .border-gray-300 {
-  border-color: var(--border-color);
-}
-
-/* Modify hero and work section for dark mode */
-.dark .bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, #4b5563, #1e293b); /* Darker gradient */
-}
-
-.dark .bg-blue-100 {
-  background-color: #2d3748; /* Darker background for work section */
-}
-/* Hero section background gradient */
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, #93C5FD, #3B82F6);
-}
-
-
+/* Existing dark mode styles */
 
 /* Dark Mode Toggle Button */
 #theme-toggle {
@@ -52,7 +15,6 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
-
 
 nav.sticky {
   position: -webkit-sticky;
@@ -90,48 +52,50 @@ nav ul li a:hover {
 
 
 /* About Me Section */
+
+ 
+  /* About Me Section */
 #about {
-    background-color: #f8fafc; /* Light background color for contrast */
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  background-color: #f8fafc; /* Light background color for contrast */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#about img {
+  border-radius: 9999px; /* Full roundness for the image */
+  width: 12rem; /* Fixed size */
+  height: 12rem; /* Fixed size */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+#about h2 {
+  color: #1e293b; /* Dark blue text color */
+  margin-bottom: 1rem;
+}
+
+#about p {
+  color: #4b5563; /* Dark grey text color */
+  margin-bottom: 1rem;
+}
+
+#about a {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive design for About section */
+@media (min-width: 768px) {
+  #about .flex {
+    flex-wrap: nowrap;
   }
-  
+
+  #about .w-full {
+    width: 50%;
+  }
+
   #about img {
-    border-radius: 9999px; /* Full roundness for the image */
-    width: 12rem; /* Fixed size */
-    height: 12rem; /* Fixed size */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-right: 2rem; /* Add space between image and text on larger screens */
   }
-  
-  #about h2 {
-    color: #1e293b; /* Dark blue text color */
-    margin-bottom: 1rem;
-  }
-  
-  #about p {
-    color: #4b5563; /* Dark grey text color */
-    margin-bottom: 1rem;
-  }
-  
-  #about a {
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  /* Responsive design for About section */
-  @media (min-width: 768px) {
-    #about .flex {
-      flex-wrap: nowrap;
-    }
-  
-    #about .w-full {
-      width: 50%;
-    }
-  
-    #about img {
-      margin-right: 2rem; /* Add space between image and text on larger screens */
-    }
-  }
-  
+}
 
 /* Button styles */
 .inline-block {
@@ -185,7 +149,7 @@ nav ul li a:hover {
 
 /* Portfolio Section */
 #portfolio {
-  background-color: #e2e8f0; /* Lighter blue background for the section */
+  background-color: #f8fafc; /* Lighter blue background for the section */
 }
 
 #portfolio h2 {
@@ -377,4 +341,281 @@ nav ul li a:hover {
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+
+
+/* styles.css */
+
+/* Light mode styles */
+/* Existing styles for light mode */
+
+/* Dark mode styles */
+.dark #about,
+.dark #experience {
+  background-color: #1a202c; /* Dark gray background in dark mode */
+  color: #cbd5e1; /* Light gray text in dark mode */
+}
+
+.dark #about a,
+.dark #experience a {
+  color: #63b3ed; /* Lighter blue links in dark mode */
+}
+
+/* Adjusted to include h2 for the experience section */
+.dark #about h2,
+.dark #experience h2 { /* Corrected to target h2 in the experience section */
+  color: #ccd6f6; /* White text for headings in dark mode */
+}
+
+.dark #about p,
+.dark #experience p,
+.dark #about a,
+.dark #experience a {
+  color: #cbd5e1; /* Light gray text for paragraphs and links in dark mode */
+}
+
+.dark #about a:hover,
+.dark #experience a:hover {
+  background-color: #2b6cb0; /* Darker blue for button hover in dark mode */
+}
+
+
+
+/* Portfolio Section Styles in Light Mode */
+
+
+/* Dark Mode Styles for Portfolio Section */
+.dark #portfolio {
+  background-color: #1a202c; /* Dark gray background, consistent with the About and Experience sections */
+}
+
+.dark #portfolio h2 {
+  color: #ccd6f6; /* White text for the heading in dark mode */
+}
+
+.dark #portfolio .bg-white {
+  background-color: #2d3748; /* Darker card background in dark mode */
+}
+
+.dark #portfolio h3,
+.dark #portfolio p {
+  color: #cbd5e1; /* Light gray text for content in dark mode */
+}
+
+.dark #portfolio a {
+  color: #63b3ed; /* Lighter blue links in dark mode */
+}
+
+.dark #portfolio a:hover {
+/* Darker blue for button hover in dark mode */
+  color: #ffffff; /* Ensure text color is white on hover for better readability */
+}
+
+
+
+
+
+
+/* Skills & Expertise Section Dark Mode Styles */
+
+/* Target the skills section specifically in dark mode */
+/* Skills & Expertise Section Dark Mode Styles */
+
+/* Adjust the background to a very dark blue for a deeper contrast */
+/* Skills & Expertise Section Dark Mode Styles */
+
+/* Opt for a deep, rich navy background for a sophisticated look */
+.dark #skills {
+  background-color: #0a192f; /* A deep navy, offering a modern and sophisticated backdrop */
+  color: #8892b0; /* A soft, desaturated blue for general text, ensuring readability */
+}
+
+/* Headings within the skills section pop against the dark background */
+.dark #skills h2 {
+  color: #ccd6f6; /* A light, airy blue that stands out for the section title */
+}
+
+/* Skill item headings and links are a bit brighter for emphasis */
+.dark #skills h3,
+.dark #skills a {
+  color: #e6f1ff; /* A very light blue, almost white, for clear visibility and emphasis */
+}
+
+/* Skill items feature a slightly contrasting background for depth */
+.dark .skill-item {
+  background-color: #112240; /* A slightly lighter navy than the section background, adding depth */
+  padding: 1rem; /* Maintain padding for visual spacing */
+  border-radius: 0.5rem; /* Keep rounded corners for a modern look */
+}
+
+/* Text within skill items is toned for comfortable reading */
+.dark .skill-item h3,
+.dark .skill-item p {
+  color: #a8b2d1; /* A muted, medium blue that's easy on the eyes while providing sufficient contrast */
+}
+
+
+/* Blog Section Styles */
+
+/* Light Mode Styles for Blog Section */
+
+
+
+/* Dark Mode Styles for Blog Section */
+.dark #blog {
+  background-color: #0a192f; /* Deep navy background, similar to the Skills section */
+}
+
+.dark #blog h2 {
+  color: #ccd6f6; /* Light, airy blue for the section title in dark mode */
+}
+
+.dark #blog .blog-card {
+  background-color: #112240; /* Slightly lighter navy for the card backgrounds, adding depth */
+  border-radius: 0.5rem; /* Rounded corners for a modern look */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.dark #blog .blog-card a {
+  color: #e6f1ff; /* Very light blue, almost white, for clear visibility and emphasis */
+  display: block; /* Ensure the link takes up the entire card area for easier clicking */
+  padding: 1rem; /* Padding for visual spacing */
+}
+
+.dark #blog .blog-card a:hover {
+  color: #a8b2d1; /* A muted, medium blue for hover state, ensuring interactivity is noticeable */
+}
+
+
+
+
+
+
+/* Dark Mode Styles for Contact Section */
+.dark #contact {
+  background-color: #0a192f; /* Deep navy background, consistent with the Skills and Blog sections */
+}
+
+.dark #contact h2,
+.dark #contact p,
+.dark #contact label {
+  color: #ccd6f6; /* Light, airy blue for text, ensuring readability in dark mode */
+}
+
+.dark #contact a {
+  color: #e6f1ff; /* Very light blue, almost white, for links in dark mode */
+}
+
+.dark #contact a:hover {
+  color: #a8b2d1; /* A muted, medium blue for hover state, ensuring interactivity is noticeable */
+}
+
+.dark #contact input,
+.dark #contact textarea {
+  background-color: #112240; /* Slightly lighter navy for input fields, adding depth */
+  border-color: #2c5282; /* Border color for inputs */
+  color: #e6f1ff; /* Text color for inputs */
+}
+
+.dark #contact input:focus,
+.dark #contact textarea:focus {
+  border-color: #2563eb; /* Brighter border color on focus for contrast */
+  background-color: #112240; /* Maintain background color on focus */
+}
+
+.dark #contact button {
+  background-color: #2563eb; /* Button background in dark mode */
+  color: #ffffff; /* Button text color in dark mode */
+}
+
+.dark #contact button:hover {
+  background-color: #3b82f6; /* Slightly lighter blue for button hover */
+}
+
+
+
+
+
+
+
+/* Dark Mode Styles for Additional Info Section */
+.dark #additional-info {
+  background-color: #1a202c; /* Dark gray background, consistent with the Portfolio and About sections */
+}
+
+.dark #additional-info h2 {
+  color: #ccd6f6; /* White text for the heading in dark mode */
+}
+
+.dark #additional-info .bg-blue-100 {
+  background-color: #2d3748; /* Darker card background in dark mode */
+}
+
+.dark #additional-info h3,
+.dark #additional-info p {
+  color: #cbd5e1; /* Light gray text for content in dark mode */
+}
+
+.dark #additional-info a {
+  color: #63b3ed; /* Lighter blue links in dark mode */
+}
+
+.dark #additional-info a:hover {
+  background-color: #2b6cb0; /* Darker blue for button hover in dark mode */
+  color: #ffffff; /* Ensure text color is white on hover for better readability */
+}
+
+
+
+
+
+/* Dark Mode Styles */
+
+/* Base Dark Mode Styles */
+body.dark {
+  background-color: #282c34; /* A deep, muted dark background for overall comfort */
+  color: #C0C0C0; /* General text color set to a softer grey for body text readability */
+}
+
+/* Blog Post Title */
+body.dark #blog-post-title h1 {
+  color: #E8E8E8; /* Brighter white for main titles to ensure they stand out prominently */
+}
+
+/* Paragraphs */
+body.dark #blog-post-content p {
+  color: #C0C0C0; /* Soft grey for comfortable reading */
+}
+
+/* List Items and Blockquotes for consistency */
+body.dark #blog-post-content li,
+body.dark #blog-post-content blockquote {
+  color: #C0C0C0; /* Matching the paragraph color for uniform readability */
+}
+
+/* Subtitles for Better Differentiation */
+body.dark #blog-post-content h2,
+body.dark #blog-post-content h3 {
+  color: #D0D0D0; /* Slightly brighter than body text but not as bright as titles, creating a clear hierarchy */
+}
+
+/* "Go Back" Button */
+
+
+/* Hyperlinks */
+body.dark #blog-post-content a {
+  color: #4FD1C5; /* Bright teal for links, offering a modern and vibrant contrast */
+}
+
+body.dark #blog-post-content a:hover {
+  color: #38B2AC; /* Slightly darker teal on hover for a subtle interaction cue */
+}
+
+
+
+/* Images */
+body.dark #blog-post-content img {
+  border: 2px solid #404850; /* A subtle border color for defining images without overwhelming */
+  filter: brightness(0.85); /* Slightly reduce brightness to blend images into the dark theme smoothly */
 }
