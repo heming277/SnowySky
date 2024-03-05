@@ -320,8 +320,8 @@
   <script>
     // Add smooth scrolling to all links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (event) {
-        e.preventDefault();
+      anchor.addEventListener('click', function (t) {
+        t.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
