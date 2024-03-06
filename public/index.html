@@ -15,7 +15,7 @@
 <body class="bg-blue-200">
  <!-- Sticky Navigation Bar -->
 <nav class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow flex justify-between items-center">
-  <div class="container mx-0 py-2.5 md:py-0 md:mx-auto px-4 flex justify-between items-center ">
+  <div class="container py-2.5 md:py-0 md:mx-auto px-4 flex justify-between items-center  ">
      <!-- Hamburger Menu -->
     <div class="md:hidden">
        <button id="menu-btn" class="flex items-center px-3 py-2 border rounded text-gray-600 dark:text-gray-200 border-gray-600 dark:border-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:border-blue-500 dark:hover:border-blue-400">
@@ -64,7 +64,6 @@
    const menuBtn = document.getElementById('menu-btn');
    const sideNav = document.getElementById('side-nav');
    const overlay = document.getElementById('overlay');
-   const closeBtn = document.getElementById('close-btn'); // Get the close button
 
    // Toggle side navigation and overlay
    menuBtn.addEventListener('click', () => {
@@ -86,8 +85,7 @@
    });
  
    overlay.addEventListener('click', closeNav);
-    closeBtn.addEventListener('click', closeNav); // Add event listener to close button
-
+// Add event listener to close button
    // Prevent side navigation from closing when clicking inside
    sideNav.addEventListener('click', (event) => {
      event.stopPropagation();
@@ -138,7 +136,7 @@
 <!-- About Section -->
 
 <section id="about" class="py-16 bg-white dark:bg-gray-900">
-  <div class="container mx-auto px-4 max-w-4xl">
+  <div class="container mx-auto px-4 max-w-4xl ">
     <div class="flex flex-wrap justify-center text-center md:text-left">
       <div class="w-full md:w-1/2">
         <img src="assets/logos/mimi.png" alt="Heming Liu" class="rounded-full mx-auto md:mx-0 mb-8 md:mb-0 w-48 h-48 object-cover">
@@ -158,7 +156,7 @@
 <!-- Experience Section -->
 
 <section id="experience" class="py-16 bg-f8fafc">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 ">
       <h2 class="text-4xl font-normal text-center text-1e293b mb-12">Where I've Worked</h2>
       <div class="experience-grid">
         <!-- Experience Item -->
@@ -251,13 +249,156 @@
 
 
 
+<!-- Skills & Expertise Section -->
+<section id="zskills" class=" py-16 bg-gray-100  ">
+  <div class="container mx-auto px-4 ">
+    <h2 class="text-4xl font-bold text-center mb-12 ">Skills & Expertise</h2>
+    <!-- Tabs for Skill Categories -->
+    <div class="mb-8">
+      <nav class="flex flex-wrap justify-center -mb-px text-center" id="skills-tab">
+        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 active:border-blue-500 border-b-2" data-tabs-target="#languages"><i class="fas fa-code mr-2"></i>Languages</a>
+        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#frameworks"><i class="fas fa-cubes mr-2"></i>Frameworks & Libraries</a>
+        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#tools"><i class="fas fa-tools mr-2"></i>Tools & Platforms</a>
+        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#practices"><i class="fas fa-lightbulb mr-2"></i>Practices</a>
+      </nav>
+    </div>
+<!-- Tab Content -->
+<div class="relative" style="min-height: 12rem;"> 
+<div class="flex justify-center">
+<div id="skills-content">
+  <!-- Languages -->
+  <div id="languages" class="skills-content active " style="display: block;">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div class="flex items-center"><i class="fab fa-python text-3xl text-blue-500"></i><span class="ml-4 ">Python</span></div>
+      <div class="flex items-center"><i class="fab fa-js-square text-3xl text-yellow-500"></i><span class="ml-4">JavaScript</span></div>
+      <div class="flex items-center"><i class="fab fa-java text-3xl text-red-500"></i><span class="ml-4">Java</span></div>
+      <div class="flex items-center"><i class="fas fa-hashtag text-3xl text-gray-500"></i><span class="ml-4">C#</span></div>
+      <div class="flex items-center"><i class="fas fa-c text-3xl text-green-500"></i><span class="ml-4">C++</span></div>
+      <div class="flex items-center"><i class="fab fa-c  text-3xl text-blue-500"></i><span class="ml-4">C</span></div>
+      <div class="flex items-center"><i class="fas fa-database text-3xl text-blue-700"></i><span class="ml-4">SQL</span></div>
+      <div class="flex items-center"><i class="fas fa-code text-3xl text-purple-500"></i><span class="ml-4">Go</span></div>
+      <div class="flex items-center"><i class="fas fa-rust text-3xl text-orange-500"></i><span class="ml-4">Rust</span></div>
+      <div class="flex items-center"><i class="fas fa-scroll text-3xl text-red-500"></i><span class="ml-2">Scala</span></div>
+      <div class="flex items-center"><i class="fab fa-swift text-3xl text-orange-500"></i><span class="ml-4">Swift</span></div>
+      <div class="flex items-center"><i class="fas fa-terminal text-3xl text-gray-500"></i><span class="ml-4">Shell</span></div>
+      <div class="flex items-center"><i class="fab fa-html5 text-3xl text-orange-500"></i><span class="ml-4">HTML</span></div>
+      <div class="flex items-center"><i class="fab fa-css3-alt text-3xl text-blue-500"></i><span class="ml-4">CSS</span></div>
+      <div class="flex items-center"><i class="fab fa-js-square text-3xl text-yellow-500"></i><span class="ml-4">TypeScript</span></div>
+    </div>
+  </div>
+  <!-- Frameworks & Libraries -->
+ <!-- Frameworks & Libraries -->
+<div id="frameworks" class="skills-content hidden ">
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="flex items-center"><i class="fab fa-react text-3xl text-sky-500"></i><span class="ml-4">React</span></div>
+    <div class="flex items-center"><i class="fab fa-node-js text-3xl text-green-500"></i><span class="ml-4">Next.js</span></div>
+    <div class="flex items-center"><i class="fas fa-flask text-3xl text-purple-500"></i><span class="ml-4">Flask</span></div>
+    <div class="flex items-center"><i class="fas fa-cube text-3xl text-green-500"></i><span class="ml-4">Django</span></div>
+    <div class="flex items-center"><i class="fas fa-fast-forward text-3xl text-blue-500"></i><span class="ml-4">FastAPI</span></div>
+    <div class="flex items-center"><i class="fas fa-brain text-3xl text-pink-500"></i><span class="ml-4">PyTorch</span></div>
+    <div class="flex items-center"><i class="fas fa-circle-notch text-3xl text-orange-500"></i><span class="ml-4">TensorFlow</span></div>
+    <div class="flex items-center"><i class="fas fa-chart-line text-3xl text-green-500"></i><span class="ml-4">Sklearn</span></div>
+    <div class="flex items-center"><i class="fas fa-cube text-3xl text-red-500"></i><span class="ml-4">Numpy</span></div>
+    <div class="flex items-center"><i class="fas fa-table text-3xl text-blue-500"></i><span class="ml-4">Pandas</span></div>
+    <div class="flex items-center"><i class="fas fa-chart-pie text-3xl text-yellow-500"></i><span class="ml-4">Matplotlib</span></div>
+    <div class="flex items-center"><i class="fas fa-scroll text-3xl text-purple-500"></i><span class="ml-4">Jinja</span></div>
+    <div class="flex items-center"><i class="fas fa-chart-area text-3xl text-green-500"></i><span class="ml-4">D3.js</span></div>
+    <div class="flex items-center"><i class="fas fa-robot text-3xl text-gray-500"></i> <span class="ml-2">Transformers</span></div>
+  </div>
+</div>
+   <!-- Tools & Platforms -->
+   <div id="tools" class="skills-content hidden">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="flex items-center"><i class="fab fa-docker text-3xl text-blue-500"></i><span class="ml-2">Docker</span></div>
+      <div class="flex items-center"><i class="fab fa-aws text-3xl text-orange-500"></i><span class="ml-2">AWS</span></div>
+      <div class="flex items-center"><i class="fab fa-git text-3xl text-red-500"></i><span class="ml-4">Git</span></div>
+      <div class="flex items-center"><i class="fas fa-cloud text-3xl text-blue-600"></i><span class="ml-2">Kubernetes</span></div>
+      <div class="flex items-center"><i class="fab fa-google text-3xl text-green-500"></i><span class="ml-4">GCP</span></div>
+      <div class="flex items-center"><i class="fab fa-microsoft text-3xl text-blue-500"></i><span class="ml-4">Azure</span></div>
+      <div class="flex items-center"><i class="fas fa-tools text-3xl text-gray-500"></i><span class="ml-4">Jenkins</span></div>
+      <div class="flex items-center"><i class="fas fa-tasks text-3xl text-yellow-500"></i><span class="ml-4">Jira</span></div>
+      <div class="flex items-center"><i class="fas fa-microchip text-3xl text-purple-500"></i><span class="ml-4">Splunk</span></div>
+      <div class="flex items-center"><i class="fas fa-database text-3xl text-green-500"></i><span class="ml-4">MongoDB</span></div>
+      <div class="flex items-center"><i class="fas fa-database text-3xl text-blue-500"></i><span class="ml-4">PostgreSQL</span></div>
+      <div class="flex items-center"><i class="fas fa-exchange-alt text-3xl text-orange-500"></i><span class="ml-4">RabbitMQ</span></div>
+      <div class="flex items-center"><i class="fas fa-search text-3xl text-blue-500"></i><span class="ml-4">Elasticsearch</span></div>
+      <div class="flex items-center"><i class="fas fa-sync text-3xl text-red-500"></i><span class="ml-4">Celery</span></div>
+      <div class="flex items-center"><i class="fas fa-fire text-3xl text-orange-500"></i><span class="ml-4">Redis</span></div>
+    </div>
+  </div>
+  <!-- Practices -->
+  <div id="practices" class="skills-content hidden">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+      <div class="flex items-center"><i class="fas fa-users-cog text-3xl text-purple-500"></i><span class="ml-4">Agile</span></div>
+      <div class="flex items-center"><i class="fas fa-server text-3xl text-green-500"></i><span class="ml-4">Microservices</span></div>
+      <div class="flex items-center"><i class="fas fa-vial text-3xl text-red-500"></i><span class="ml-2">TDD</span></div>
+      <div class="flex items-center"><i class="fas fa-sync-alt text-3xl text-blue-500"></i><span class="ml-4">CI/CD</span></div>
+      <div class="flex items-center"><i class="fas fa-project-diagram text-3xl text-green-500"></i><span class="ml-4">Sys Design</span></div>
+      <div class="flex items-center"><i class="fas fa-puzzle-piece text-3xl text-orange-500"></i><span class="ml-4">API Design</span></div>
+      <div class="flex items-center"><i class="fas fa-database text-3xl text-blue-700"></i><span class="ml-4">Data Science</span></div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.skills-tab');
+    const contents = document.querySelectorAll('.skills-content');
+    let activeTabIndex = 0; // Start with the first tab
+  
+    function switchTab() {
+      tabs[activeTabIndex].click(); // Simulate click on the current tab
+      activeTabIndex = (activeTabIndex + 1) % tabs.length; // Move to the next tab, loop back to the first tab if at the end
+    }
+  
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        const targetId = this.dataset.tabsTarget;
+        const targetContent = document.querySelector(targetId);
+  
+        tabs.forEach(t => {
+          t.classList.remove('text-blue-600', 'border-blue-500');
+          t.classList.add('text-gray-600', 'border-transparent');
+        });
+        this.classList.remove('text-gray-600', 'border-transparent');
+        this.classList.add('text-blue-600', 'border-blue-500');
+  
+        contents.forEach(content => {
+          if(content.id === targetContent.id) {
+            content.classList.remove('hidden');
+            content.style.display = 'block'; // Ensure the target content is shown
+          } else {
+            content.classList.add('hidden');
+            content.style.display = 'none'; // Hide other contents
+          }
+        });
+  
+        activeTabIndex = index; // Update the activeTabIndex when a tab is manually clicked
+      });
+    });
+  
+    setInterval(switchTab, 5000); 
+
+    tabs[0].click();
+    // Automatically switch tabs every 5000 milliseconds (5 seconds)
+  });
+  </script>
+
 
 
 
   
 <!-- Portfolio Section -->
 <section id="portfolio" class="py-16 bg-blue-100">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 max-w-6xl ">
       <h2 class="text-4xl font-bold text-center mb-8">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Portfolio item 1 -->
@@ -287,7 +428,7 @@
 <!-- Blog Section -->
 
 <section id="blog" class="py-16 bg-blue-200">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 max-w-6xl">
     <h2 class="text-4xl font-bold text-center mb-8">Blog Posts</h2>
     <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
      <script type="module">document.addEventListener('DOMContentLoaded', function() {
@@ -324,7 +465,7 @@
 
 
   <section id="additional-info" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 max-w-6xl">
       <h2 class="text-4xl font-bold text-center mb-8">More About Me</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Education -->
@@ -441,11 +582,25 @@
   }
 });
   
+// Adjust canvas size when the window is resized
+window.addEventListener('resize', () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+  // Optionally, re-initialize particles or adjust them as needed
+// This will recreate the particles for the new size
+});
+
+
      // Particle effect with optimized animation loop
   const canvas = document.getElementById('particleCanvas');
   const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  resizeCanvas();
+
+  function resizeCanvas() {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+}
+
 
   const particles = [];
   const particleCount = 37;
