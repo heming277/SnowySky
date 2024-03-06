@@ -6,11 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Website</title>
   <link href="animations.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
   <link href="output.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  <style>
+
+    #typing {
+      min-height: 24px; /* Adjust based on your font size to ensure it's always taller than the tallest possible text */
+      display: inline-block; /* Allows us to set a height */
+    }
+  
+    :root {
+      /* Light mode with a bluer gradient */
+      --sky-color-start: #7dd3fc; /* Lighter blue */
+      --sky-color-end: #1e40af; /* Darker blue */
+    }
+  
+    .dark {
+      --sky-color-start: #023e8a; /* Rich dark blue */
+      --sky-color-end: #001233; /* Almost black blue */
+    }
+  
+  
+    @keyframes skyGradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  
+    #hero {
+      background: linear-gradient(270deg, var(--sky-color-start), var(--sky-color-end));
+      background-size: 400% 400%;
+      animation: skyGradientAnimation 30s ease infinite;
+    }
+  
+    /* Adjusting text color for better visibility in dark mode */
+    .dark #hero h1, .dark #hero p {
+      color: #cbd5e1; /* Lighter gray for better contrast */
+    }
+  </style>
 </head>
 <body class="bg-blue-200">
  <!-- Sticky Navigation Bar -->
@@ -190,81 +225,31 @@
     </div>
   </section>
   
-<!-- Skills & Expertise Section -->
-<section id="skills">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center">Skills & Expertise</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Advanced Programming</h3>
-          <p>Proficient in Swift, C#, Java, Python, C, C++, with a focus on creating efficient, scalable code.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Augmented Reality & AI</h3>
-          <p>Developed AR applications using ARKit and RealityKit. Experience in AI news aggregation and sentiment analysis.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Web Development & Design</h3>
-          <p>Full-stack development skills with MERN stack and responsive web design with HTML/CSS.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Data Analysis & Machine Learning</h3>
-          <p>Applied unsupervised learning with LDA for topic modeling and utilized NLP for sentiment analysis.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Software Architecture</h3>
-          <p>Designed and implemented robust software solutions, including command-line tools, web crawlers, and media allocators.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Version Control & CI/CD</h3>
-          <p>Expertise in Git and Perforce, with experience in continuous integration and deployment workflows.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Testing & Automation</h3>
-          <p>Developed comprehensive automation test suites and performed data mining for test result analysis.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Database Management</h3>
-          <p>Managed both SQL and NoSQL databases, with experience in database design and web API integration.</p>
-        </div>
-        <!-- Skill Item -->
-        <div class="skill-item">
-          <h3 class="text-xl font-semibold">Interactive Visualization</h3>
-          <p>Created web applications to visualize complex data, such as attention mechanisms in language models.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
 
 <!-- Skills & Expertise Section -->
-<section id="zskills" class=" py-16 bg-gray-100  ">
+<section id="skills" class=" py-16 bg-blue-100">
   <div class="container mx-auto px-4 ">
     <h2 class="text-4xl font-bold text-center mb-12 ">Skills & Expertise</h2>
     <!-- Tabs for Skill Categories -->
     <div class="mb-8">
-      <nav class="flex flex-wrap justify-center -mb-px text-center" id="skills-tab">
-        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 active:border-blue-500 border-b-2" data-tabs-target="#languages"><i class="fas fa-code mr-2"></i>Languages</a>
-        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#frameworks"><i class="fas fa-cubes mr-2"></i>Frameworks & Libraries</a>
-        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#tools"><i class="fas fa-tools mr-2"></i>Tools & Platforms</a>
-        <a href="#" class="skills-tab text-gray-600 py-2 px-4 rounded-lg hover:text-blue-600 hover:border-blue-600 border-b-2 border-transparent" data-tabs-target="#practices"><i class="fas fa-lightbulb mr-2"></i>Practices</a>
+      <nav class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center" id="skills-tab">
+        <a href="#" class="skills-tab group py-2 px-4 rounded-lg text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 border-b-2 border-transparent hover:border-blue-500 dark:hover:border-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg bg-gradient-to-r from-blue-200 to-gray-200 dark:from-blue-800 dark:to-gray-800 hover:from-gray-200 hover:to-blue-200 dark:hover:from-gray-800 dark:hover:to-blue-800" data-tabs-target="#languages">
+          <i class="fas fa-code mr-2"></i>Languages
+        </a>
+        <a href="#" class="skills-tab group py-2 px-4 rounded-lg text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 border-b-2 border-transparent hover:border-blue-500 dark:hover:border-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg bg-gradient-to-r from-gray-200 to-blue-200 dark:from-gray-800 dark:to-blue-800 hover:from-blue-200 hover:to-gray-200 dark:hover:from-blue-800 dark:hover:to-gray-800" data-tabs-target="#frameworks">
+          <i class="fas fa-cubes mr-2"></i>Frameworks & Libraries
+        </a>
+        <a href="#" class="skills-tab group py-2 px-4 rounded-lg text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 border-b-2 border-transparent hover:border-blue-500 dark:hover:border-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg bg-gradient-to-r from-blue-200 to-gray-200 dark:from-blue-800 dark:to-gray-800 hover:from-gray-200 hover:to-blue-200 dark:hover:from-gray-800 dark:hover:to-blue-800" data-tabs-target="#tools">
+          <i class="fas fa-tools mr-2"></i>Tools & Platforms
+        </a>
+        <a href="#" class="skills-tab group py-2 px-4 rounded-lg text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-300 border-b-2 border-transparent hover:border-blue-500 dark:hover:border-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg bg-gradient-to-r from-gray-200 to-blue-200 dark:from-gray-800 dark:to-blue-800 hover:from-blue-200 hover:to-gray-200 dark:hover:from-blue-800 dark:hover:to-gray-800" data-tabs-target="#practices">
+          <i class="fas fa-lightbulb mr-2"></i>Practices
+        </a>
       </nav>
     </div>
 <!-- Tab Content -->
 <div class="relative" style="min-height: 12rem;"> 
-<div class="flex justify-center">
+<div class="flex justify-center mt-20">
 <div id="skills-content">
   <!-- Languages -->
   <div id="languages" class="skills-content active " style="display: block;">
@@ -397,7 +382,7 @@
 
   
 <!-- Portfolio Section -->
-<section id="portfolio" class="py-16 bg-blue-100">
+<section id="portfolio" class="py-16 bg-white">
     <div class="container mx-auto px-4 max-w-6xl ">
       <h2 class="text-4xl font-bold text-center mb-8">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -427,7 +412,7 @@
 
 <!-- Blog Section -->
 
-<section id="blog" class="py-16 bg-blue-200">
+<section id="blog" class="py-16 bg-blue-100">
   <div class="container mx-auto px-4 max-w-6xl">
     <h2 class="text-4xl font-bold text-center mb-8">Blog Posts</h2>
     <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -501,8 +486,9 @@
     </div>
   </section>
 
+
 <!-- Contact Section -->
-<section id="contact" class="py-16">
+<section id="contact" class="py-16 bg-blue-100">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-8">Get in Touch</h2>
       <p class="text-center mb-8">Feel free to reach out directly at <a href="mailto:hemingliu123@gmail.com" class="text-blue-500 hover:underline">hemingliu123@gmail.com</a></p>
@@ -529,7 +515,7 @@
   </section>
 
 <!-- Footer -->
-  <footer class="py-4 bg-blue-500 text-white dark:text-gray-200  dark:bg-gray-800  text-center">
+  <footer class="py-4 bg-white text-black dark:text-gray-200  dark:bg-gray-800  text-center">
     <p>&copy; 2024 Heming Liu. All rights reserved.</p>
   </footer>
 
@@ -665,46 +651,6 @@ window.addEventListener('resize', () => {
 
   canvas.addEventListener('mousemove', repelParticles);  
   </script>  
-
-
-<style>
-
-  #typing {
-    min-height: 24px; /* Adjust based on your font size to ensure it's always taller than the tallest possible text */
-    display: inline-block; /* Allows us to set a height */
-  }
-
-  :root {
-    /* Light mode with a bluer gradient */
-    --sky-color-start: #7dd3fc; /* Lighter blue */
-    --sky-color-end: #1e40af; /* Darker blue */
-  }
-
-  .dark {
-    --sky-color-start: #023e8a; /* Rich dark blue */
-    --sky-color-end: #001233; /* Almost black blue */
-  }
-
-
-  @keyframes skyGradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  #hero {
-    background: linear-gradient(270deg, var(--sky-color-start), var(--sky-color-end));
-    background-size: 400% 400%;
-    animation: skyGradientAnimation 30s ease infinite;
-  }
-
-  /* Adjusting text color for better visibility in dark mode */
-  .dark #hero h1, .dark #hero p {
-    color: #cbd5e1; /* Lighter gray for better contrast */
-  }
-</style>
-
-
 
 
   </body>  

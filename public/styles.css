@@ -148,39 +148,6 @@ nav ul li a:hover {
 
 
 /* Portfolio Section */
-#portfolio {
-  background-color: #f8fafc; /* Lighter blue background for the section */
-}
-
-#portfolio h2 {
-  color: #1e293b; /* Dark blue text color */
-}
-
-#portfolio .bg-white {
-  background-color: #ffffff;
-}
-
-#portfolio .rounded-lg {
-  border-radius: 0.5rem; /* 8px */
-}
-
-#portfolio .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-#portfolio p {
-  color: #4b5563; /* Dark grey text color */
-}
-
-#portfolio a {
-  color: #3B82F6; /* Blue text color */
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-#portfolio a:hover {
-  color: #2563EB; /* Darker blue on hover */
-}
 
 /* Grid layout */
 .grid {
@@ -387,6 +354,40 @@ nav ul li a:hover {
 
 
 /* Portfolio Section Styles in Light Mode */
+#portfolio {
+  background-color: #f8fafc; /* Lighter blue background for the section */
+}
+
+#portfolio h2 {
+  color: #1e293b; /* Dark blue text color */
+}
+
+#portfolio .bg-white {
+  background-color: #ffffff;
+}
+
+#portfolio .rounded-lg {
+  border-radius: 0.5rem; /* 8px */
+}
+
+#portfolio .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#portfolio p {
+  color: #4b5563; /* Dark grey text color */
+}
+
+#portfolio a {
+  color: #3B82F6; /* Blue text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#portfolio a:hover {
+  color: #2563EB; /* Darker blue on hover */
+}
+
 
 
 /* Dark Mode Styles for Portfolio Section */
