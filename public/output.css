@@ -798,7 +798,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #3B82F6; /* Match your hero gradient end color */
+  color: #3B82F6; /* Match hero gradient end color */
 }
 
 
@@ -1028,17 +1028,6 @@ nav ul li a:hover {
 }
 
 /* Responsive design for Experience section */
-@media (min-width: 640px) {
-  .experience-item {
-    width: calc(50% - 2rem); /* Adjust width and spacing for medium screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  .experience-item {
-    width: calc(25% - 2rem); /* Adjust width and spacing for large screens */
-  }
-}
 
 /* Combined Section for Education, Volunteering, and Interests */
 #additional-info {

@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #3B82F6; /* Match your hero gradient end color */
+  color: #3B82F6; /* Match hero gradient end color */
 }
 
 
@@ -246,17 +246,7 @@ nav ul li a:hover {
 }
 
 /* Responsive design for Experience section */
-@media (min-width: 640px) {
-  .experience-item {
-    width: calc(50% - 2rem); /* Adjust width and spacing for medium screens */
-  }
-}
 
-@media (min-width: 1024px) {
-  .experience-item {
-    width: calc(25% - 2rem); /* Adjust width and spacing for large screens */
-  }
-}
 
 /* Combined Section for Education, Volunteering, and Interests */
 #additional-info {
@@ -321,6 +311,7 @@ nav ul li a:hover {
 /* Light mode styles */
 /* Existing styles for light mode */
 
+
 /* Dark mode styles */
 .dark #about,
 .dark #experience {
@@ -346,10 +337,11 @@ nav ul li a:hover {
   color: #cbd5e1; /* Light gray text for paragraphs and links in dark mode */
 }
 
-.dark #about a:hover,
-.dark #experience a:hover {
+.dark #about a:hover{
   background-color: #2b6cb0; /* Darker blue for button hover in dark mode */
 }
+
+
 
 
 

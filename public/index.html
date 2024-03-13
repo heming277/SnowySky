@@ -13,7 +13,7 @@
   <style>
 
     #typing {
-      min-height: 24px; /* Adjust based on your font size to ensure it's always taller than the tallest possible text */
+      min-height: 24px; /* Adjust based on font size to ensure it's always taller than the tallest possible text */
       display: inline-block; /* Allows us to set a height */
     }
   
@@ -125,6 +125,15 @@
    sideNav.addEventListener('click', (event) => {
      event.stopPropagation();
    });
+
+   // Listen for window resize events
+   window.addEventListener('resize', () => {
+     // Check if the window width is greater than or equal to 768px
+     if (window.innerWidth >= 768) {
+       // If so, close the side navigation and overlay
+       closeNav();
+     }
+   });
  </script>
  
 <!-- Hero Section with Dynamic Sky Background -->
@@ -188,44 +197,61 @@
     </div>
   </div>
 </section>
+
 <!-- Experience Section -->
-
 <section id="experience" class="py-16 bg-f8fafc">
-    <div class="container mx-auto px-4 ">
-      <h2 class="text-4xl font-normal text-center text-1e293b mb-12">Where I've Worked</h2>
-      <div class="experience-grid">
-        <!-- Experience Item -->
-        <div class="experience-item">
-          <img src="assets/logos/intuit-logo.png" alt="Intuit Logo" class="experience-logo">
-          <p class="experience-company">Intuit Inc.</p>
-        </div>
-        <!-- Experience Item -->
-        <div class="experience-item">
-            <img src="assets/logos/facebook-logo.png" alt="Facebook Logo" class="experience-logo">
-            <img src="assets/logos/meta-logo.png" alt="Meta Logo" class="experience-logo">
-            <p class="experience-company">Facebook (now Meta)</p>
-        </div>
-        <!-- Experience Item -->
-        <div class="experience-item">
-          <img src="assets/logos/arista-logo.png" alt="Arista Networks Logo" class="experience-logo">
-          <p class="experience-company">Arista Networks</p>
-        </div>
-        <!-- Experience Item -->
-        <div class="experience-item">
-          <img src="assets/logos/amd-logo.png" alt="AMD Logo" class="experience-logo">
-          <p class="experience-company">Advanced Micro Devices</p>
-        </div>
-        <!-- Experience Item -->
-        <div class="experience-item">
-            <img src="assets/logos/klocwork-logo.png" alt="Klocwork Logo" class="experience-logo">
-            <img src="assets/logos/perforce-logo.png" alt="Perforce Logo" class="experience-logo">
-            <p class="experience-company">Klocwork (now Perforce)</p>
-        </div>
+  <div class="container mx-auto px-4 ">
+    <h2 class="text-4xl font-normal text-center text-1e293b mb-12">Where I've Worked</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+      <!-- Experience Item -->
+      <a href="https://www.learnspark.ca/" class="experience-item-link group" target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/learnspark-logo.png" alt="LearnSpark Logo" class="experience-logo mb-4 w-32 h-auto ">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">LearnSpark</p>
+      </div>
+      </a>
+     <!-- Experience Item -->
+     <a href="https://www.intuit.com/" class="experience-item-link group"  target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/intuit-logo.png" alt="Intuit Logo" class="experience-logo mt-6 mb-4 w-32 h-auto">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">Intuit Inc.</p>
+      </div>
+      </a>
+      <!-- Experience Item -->
+      <a href="https://www.facebook.com/" class="experience-item-link group"  target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/facebook-logo.png" alt="Facebook Logo" class="experience-logo mb-4 w-32 h-auto">
+        <img src="assets/logos/meta-logo.png" alt="Meta Logo" class="experience-logo mb-4 w-32 h-auto">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">Facebook (Meta)</p>
+      </div>
+      </a>
+      <!-- Experience Item -->
+      <a href="https://www.arista.com/" class="experience-item-link group"  target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/arista-logo.png" alt="Arista Networks Logo" class="experience-logo mb-4 w-32 h-auto">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">Arista Networks</p>
+      </div>
+      </a>
+      <!-- Experience Item -->
+      <a href="https://www.amd.com/" class="experience-item-link group"  target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/amd-logo.png" alt="AMD Logo" class="experience-logo mb-4 w-32 h-auto">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">Advanced Micro Devices</p>
+      </div>
+      </a>
+      <!-- Experience Item -->
+      <a href="https://www.perforce.com/products/klocwork" class="experience-item-link group"  target="_blank" rel="noopener noreferrer">
+      <div class="experience-item flex flex-col items-center transform transition duration-300 hover:scale-105">
+        <img src="assets/logos/klocwork-logo.png" alt="Klocwork Logo" class="experience-logo mb-4 w-32 h-auto">
+        <img src="assets/logos/perforce-logo.png" alt="Perforce Logo" class="experience-logo mb-4 w-32 h-auto">
+        <p class="experience-company text-gray-700 font-semibold group-hover:text-blue-500 transition duration-300">Klocwork (Perforce)</p>
+      </div>
+      </a>
     </div>
-    </div>
-  </section>
-  
+  </div>
 
+
+</section>
 <!-- Skills & Expertise Section -->
 <section id="skills" class=" py-16 bg-blue-100">
   <div class="container mx-auto px-4 ">
@@ -387,20 +413,20 @@
       <h2 class="text-4xl font-bold text-center mb-8">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Portfolio item 1 -->
-        <div class="bg-white rounded-lg shadow-lg p-5">
+        <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
           <h3 class="text-lg font-bold">DistributedCluster_MLTrainer</h3>
           <p class="text-sm text-gray-600">A Python project focused on machine learning model training in a distributed system.</p>
           <a href="https://github.com/heming277/DistributedCluster_MLTrainer" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
         </div>
         <!-- Repeat for other portfolio items -->
         <!-- Portfolio item 2 -->
-        <div class="bg-white rounded-lg shadow-lg p-5">
+        <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
           <h3 class="text-lg font-bold">VisualizeAI</h3>
           <p class="text-sm text-gray-600">Visualizing the Attention Mechanism of Transformers in HTML.</p>
           <a href="https://github.com/heming277/VisualizeAI" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
         </div>
         <!-- Portfolio item 3 -->
-        <div class="bg-white rounded-lg shadow-lg p-5">
+        <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
           <h3 class="text-lg font-bold">ARPets</h3>
           <p class="text-sm text-gray-600">An AR application developed in Swift for interactive pets.</p>
           <a href="https://github.com/heming277/ARPets" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
