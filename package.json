@@ -17,6 +17,7 @@
     "autoprefixer": "^10.4.16",
     "contentful": "^10.6.24",
     "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.13",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.0"
   },
