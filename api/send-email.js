@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     service: 'gmail',
     auth: {
       user: 'hemingliu123@gmail.com',
-      pass: 'hqcg msvm ojis onhh' // gmail App Password
+      pass: process.env.GMAIL_APP_PASSWORD 
     }
   });
 
