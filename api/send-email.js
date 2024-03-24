@@ -26,10 +26,10 @@ module.exports = (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error(error);
-      res.status(500).send('Something went wrong');
+      res.status(500).json({ error: 'Something went wrong' });
     } else {
       console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
+      res.status(200).json({ message: 'Email sent successfully' });
     }
   });
 };
