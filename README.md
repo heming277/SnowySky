@@ -1,4 +1,4 @@
-#Personal Website Template
+# Personal Website Template
 
 This is my open-source personal website template that can showcase one's portfolio, blog, and skills online. 
 
