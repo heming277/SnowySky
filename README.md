@@ -1,4 +1,4 @@
-# Personal Website Template
+# SnowySky - An Open-Source Personal Website
 
 This is my open-source personal website template that can showcase one's portfolio, blog, and skills online. 
 
@@ -25,11 +25,11 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 
-git clone https://github.com/heming277/mingweb.git
+git clone https://github.com/heming277/SnowySky.git
 
 2. Navigate to the project directory:
 
-cd mingweb
+cd SnowySky
 
 3. Install dependencies:
 
@@ -64,7 +64,7 @@ I deployed on Vercel. Follow Vercel's documentation to deploy your site.
 
 ## License
 
-MingWeb is open-sourced software licensed with MIT license.
+SnowySky is open-sourced website licensed with MIT license.
 
 ## Acknowledgments
 
