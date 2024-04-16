@@ -145,7 +145,7 @@
     </div>
     
     <script>
-      const phrases = ["A place where creativity meets innovation.", "Explore my portfolio.", "Let's create something amazing together."];
+      const phrases = ["A place where innovation meets imagination", "Explore my portfolio and blogs", "Let's create something amazing together"];
       let currentPhrase = 0;
       let currentChar = 0;
       const typingElement = document.getElementById('typing');
@@ -177,10 +177,11 @@
     <canvas id="particleCanvas" width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: 0;"></canvas>
 
   </header>
-<!-- About Section -->
 
+
+  <!-- About Section -->
 <section id="about" class="py-16 bg-white dark:bg-gray-900">
-  <div class="container mx-auto px-4 max-w-4xl ">
+  <div class="container mx-auto px-4 max-w-4xl">
     <div class="flex flex-wrap justify-center text-center md:text-left">
       <div class="w-full md:w-1/2">
         <img src="assets/logos/mimi.png" alt="Heming Liu" class="rounded-full mx-auto md:mx-0 mb-8 md:mb-0 w-48 h-48 object-cover">
@@ -188,15 +189,26 @@
       <div class="w-full md:w-1/2">
         <h2 class="text-4xl font-bold text-gray-800 dark:text-gray-100">About Me</h2>
         <p class="text-lg text-gray-700 dark:text-gray-300 mt-4">
-          Hi, I'm Heming Liu, a passionate software engineer with a strong background in programming, web development, and machine learning. I graduated from the University of Waterloo with a Bachelor of Applied Science in Electrical and Computer Engineering.
+          Hi, I'm Heming Liu, a software engineer and UW grad.<br>
+          I founded LearnSpark.ca to help students.<br>
+          I'm now looking for new challenges.<br>
+          Checkout the code for this personal website <a href="#" class="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-400">here</a>.
         </p>
-        <div class="mt-8">
-          <a href="#portfolio" class="inline-block bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors">View My Github</a>
+        <div class="mt-8 flex justify-center md:justify-start space-x-4">
+          <a href="https://github.com/heming277" target="_blank" class="inline-flex items-center bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors button-link">
+            <i class="fab fa-github mr-2"></i>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/heming-liu-a8173418b/" target="_blank" class="inline-flex items-center bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors button-link">
+            <i class="fab fa-linkedin mr-2"></i>
+            LinkedIn
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Experience Section -->
 <section id="experience" class="py-16 bg-f8fafc">
@@ -295,8 +307,10 @@
       <div class="flex items-center"><i class="fab fa-html5 text-3xl text-orange-500"></i><span class="ml-4">HTML</span></div>
       <div class="flex items-center"><i class="fab fa-css3-alt text-3xl text-blue-500"></i><span class="ml-4">CSS</span></div>
       <div class="flex items-center"><i class="fab fa-js-square text-3xl text-yellow-500"></i><span class="ml-4">TypeScript</span></div>
+      <div class="flex items-center"><i class="fab fa-r-project text-3xl text-blue-500"></i><span class="ml-4">R</span></div>
     </div>
   </div>
+
   <!-- Frameworks & Libraries -->
  <!-- Frameworks & Libraries -->
 <div id="frameworks" class="skills-content hidden ">
@@ -315,6 +329,8 @@
     <div class="flex items-center"><i class="fas fa-scroll text-3xl text-purple-500"></i><span class="ml-4">Jinja</span></div>
     <div class="flex items-center"><i class="fas fa-chart-area text-3xl text-green-500"></i><span class="ml-4">D3.js</span></div>
     <div class="flex items-center"><i class="fas fa-robot text-3xl text-gray-500"></i> <span class="ml-2">Transformers</span></div>
+    <div class="flex items-center"><i class="fas fa-leaf text-3xl text-green-500"></i><span class="ml-4">Spring Boot</span></div>
+    <div class="flex items-center"><i class="fas fa-project-diagram text-3xl text-gray-500"></i> <span class="ml-2">GraphQL</span></div>
   </div>
 </div>
    <!-- Tools & Platforms -->
@@ -326,6 +342,7 @@
       <div class="flex items-center"><i class="fas fa-cloud text-3xl text-blue-600"></i><span class="ml-2">Kubernetes</span></div>
       <div class="flex items-center"><i class="fab fa-google text-3xl text-green-500"></i><span class="ml-4">GCP</span></div>
       <div class="flex items-center"><i class="fab fa-microsoft text-3xl text-blue-500"></i><span class="ml-4">Azure</span></div>
+      <div class="flex items-center"><i class="fas fa-globe text-3xl text-orange-500"></i><span class="ml-4">Terraform</span></div>
       <div class="flex items-center"><i class="fas fa-tools text-3xl text-gray-500"></i><span class="ml-4">Jenkins</span></div>
       <div class="flex items-center"><i class="fas fa-tasks text-3xl text-yellow-500"></i><span class="ml-4">Jira</span></div>
       <div class="flex items-center"><i class="fas fa-microchip text-3xl text-purple-500"></i><span class="ml-4">Splunk</span></div>
@@ -347,6 +364,7 @@
       <div class="flex items-center"><i class="fas fa-project-diagram text-3xl text-green-500"></i><span class="ml-4">Sys Design</span></div>
       <div class="flex items-center"><i class="fas fa-puzzle-piece text-3xl text-orange-500"></i><span class="ml-4">API Design</span></div>
       <div class="flex items-center"><i class="fas fa-database text-3xl text-blue-700"></i><span class="ml-4">Data Science</span></div>
+      <div class="flex items-center"><i class="fas fa-cogs text-3xl text-blue-700"></i><span class="ml-4">DevOps</span></div>
     </div>
   </div>
 
@@ -427,52 +445,73 @@
         </div>
         <!-- Portfolio item 3 -->
         <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
-          <h3 class="text-lg font-bold">ARPets</h3>
-          <p class="text-sm text-gray-600">An AR application developed in Swift for interactive pets.</p>
-          <a href="https://github.com/heming277/ARPets" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+          <h3 class="text-lg font-bold">CrawlData_Unsupervised_Learning</h3>
+          <p class="text-sm text-gray-600">Unsupervised Learning of Web Data with LDA.</p>
+          <a href="https://github.com/heming277/CrawlData_Unsupervised_Learning" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
         </div>
+          <!-- Portfolio item 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
+            <h3 class="text-lg font-bold">Url_Shortener</h3>
+            <p class="text-sm text-gray-600">A web app for shortening urls.</p>
+            <a href="https://github.com/heming277/url_shortener" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+          </div>
+                  <!-- Portfolio item 5 -->
+        <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
+          <h3 class="text-lg font-bold">DistributedWebCrawlerPipeline</h3>
+          <p class="text-sm text-gray-600">Crawl AI news items.</p>
+          <a href="https://github.com/heming277/DistributedWebCrawlerPipeline" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+        </div>
+          <!-- Portfolio item 6 -->
+          <div class="bg-white rounded-lg shadow-lg p-5 transition duration-500 ease-in-out transform hover:scale-105">
+            <h3 class="text-lg font-bold">Pixelshare</h3>
+            <p class="text-sm text-gray-600">file upload and sharing site.</p>
+            <a href="https://github.com/heming277/pixelshare" class="text-blue-500 hover:text-blue-600">View on GitHub</a>
+          </div>
         <!-- Add more portfolio items as needed -->
       </div>
     </div>
   </section>
 
 <!-- Blog Section -->
-
 <section id="blog" class="py-16 bg-blue-100">
   <div class="container mx-auto px-4 max-w-6xl">
     <h2 class="text-4xl font-bold text-center mb-8">Blog Posts</h2>
     <div id="blog-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-     <script type="module">document.addEventListener('DOMContentLoaded', function() {
-      
+      <div id="blog-spinner" class="flex justify-center items-center w-full h-64">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', function() {
       var client = contentful.createClient({
         space: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       });
-    
+
       client.getEntries()
         .then(function(entries) {
+          const blogContainer = document.getElementById('blog-posts');
+          const blogSpinner = document.getElementById('blog-spinner');
+          blogContainer.removeChild(blogSpinner); // Remove the spinner
+
           entries.items.forEach(function(entry) {
-            var blogContainer = document.getElementById('blog-posts');
             var blogCard = document.createElement('div');
             blogCard.className = 'blog-card bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105';
-            
+
             var blogLink = document.createElement('a');
             blogLink.href = `blog-template.html?post=${entry.sys.id}`;
             blogLink.className = 'block p-6 hover:text-blue-500';
             blogLink.innerText = entry.fields.title;
-            
+
             blogCard.appendChild(blogLink);
             blogContainer.appendChild(blogCard);
           });
         })
         .catch(console.error);
-    });</script>
-    </div>
-  </div>
+    });
+  </script>
 </section>
-
-
-
 
 
   <section id="additional-info" class="py-16 bg-white">
@@ -551,10 +590,8 @@
       </div>
     </div>
   </div>
+  
 </section>
-
-
-
 
 <!-- Footer -->
   <footer class="py-4 bg-white text-black dark:text-gray-200  dark:bg-gray-800  text-center">
@@ -603,15 +640,21 @@
     });
 
 
-    // Add smooth scrolling to all links
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (t) {
-        t.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+  // Add smooth scrolling to all links
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (t) {
+    t.preventDefault();
+    const href = this.getAttribute('href');
+    if (href && href !== '#') {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({
           behavior: 'smooth'
         });
-      });
-    });
+      }
+    }
+  });
+});
 
     document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
@@ -655,8 +698,6 @@
 window.addEventListener('resize', () => {
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
-  // Optionally, re-initialize particles or adjust them as needed
-// This will recreate the particles for the new size
 });
 
 

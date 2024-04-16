@@ -79,8 +79,12 @@ nav ul li a:hover {
 }
 
 #about a {
+  
   transition: background-color 0.3s ease-in-out;
 }
+
+
+
 
 /* Responsive design for About section */
 @media (min-width: 768px) {
@@ -337,11 +341,17 @@ nav ul li a:hover {
   color: #cbd5e1; /* Light gray text for paragraphs and links in dark mode */
 }
 
-.dark #about a:hover{
-  background-color: #2b6cb0; /* Darker blue for button hover in dark mode */
+.dark .button-link:hover {
+  background-color: #2b6cb0;
 }
 
+.dark #about p a {
+  color: #81e6d9; /* Teal color for better visibility in dark mode */
+}
 
+.dark #about p a:hover {
+  color: #38b2ac; /* Darker teal color on hover in dark mode */
+}
 
 
 
