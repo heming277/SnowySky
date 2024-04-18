@@ -9,16 +9,16 @@ module.exports = (req, res) => {
     port: 587,
     secure: false, // use TLS
     auth: {
-      user: 'hemingliu123@gmail.com',
+      user: process.env.GMAIL_APP_USER,
       pass: process.env.GMAIL_APP_PASSWORD
     }
   });
 
   // Configure the email options
   const mailOptions = {
-    from: 'hemingliu123@gmail.com',
-    to: 'hemingliu123@gmail.com', // Recipient email address
-    subject: 'New Message from Your Website',
+    from: process.env.GMAIL_APP_USER,
+    to: process.env.GMAIL_APP_USER, // Recipient email address
+    subject: 'New Message from SnowySky',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
