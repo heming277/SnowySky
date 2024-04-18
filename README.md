@@ -39,9 +39,9 @@ npm install
 
 Create a `.env` file in the root directory and add the following variables with your own values:
 
-CONTENTFUL_SPACE=your_contentful_space_id
-CONTENTFUL_ACCESS_TOKEN=your_contentful_access_token
-GMAIL_APP_USER=your_email
+CONTENTFUL_SPACE=your_contentful_space_id  
+CONTENTFUL_ACCESS_TOKEN=your_contentful_access_token  
+GMAIL_APP_USER=your_email  
 GMAIL_APP_PASSWORD=your_gmail_app_password
 
 ## Development
